@@ -1,0 +1,11 @@
+eureka:
+ client:
+  register-with-eureka: false
+  fetch-registry: false
+ instance:
+    hostname: 192.168.1.12
+    prefer-ip-address: true  
+ server:
+  enableSelfPreservation: false
+server:
+ port: 8761

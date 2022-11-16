@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: registry-service
+spec:
+ selector:
+  matchLabels:
+   app: registry-service
+ replicas: 1
+ template:
+  metadata:
+   labels:
+    app: registry-service
+  spec:
+   containers:
+    - name: registry-service
+      image: registry-service.jar
+      imagePullPolicy: IfNotPresent
+      ports:
+       - containerPort: 8761
